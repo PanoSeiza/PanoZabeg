@@ -8,11 +8,9 @@ import os
 CLICKHOUSE_HOST = 'ch0.prod.anal.panoramik.internal'
 
 # переменные ниже надо будет установить следующими коммитами после того как будет сделано приложение в слаке
-# os.environ['SLACK_BOT_TOKEN'] = 
-# user = 
-# token_pano = 
-# client = WebClient(token=os.environ.get('SLACK_BOT_TOKEN'))
-channel_id = 'C02FRTUQFV3' #канал panoramik-support
+os.environ['SLACK_BOT_TOKEN'] = 'xoxb-495075105047-3664659326113-EaenSEVTgdIFfmFS52YME7g8'
+client = WebClient(token=os.environ.get('SLACK_BOT_TOKEN'))
+channel_id = 'C03JJRWNH7H' #канал panoramik-support
 
 def send_message():
     try:
