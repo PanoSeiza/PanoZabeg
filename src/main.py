@@ -1,8 +1,28 @@
 from clickhouse_driver import Client
-from datetime import datetime
+from datetime import datetimec
+from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
 import pandas as pd
+import os
 
 CLICKHOUSE_HOST = 'ch0.prod.anal.panoramik.internal'
+
+# переменные ниже надо будет установить следующими коммитами после того как будет сделано приложение в слаке
+# os.environ['SLACK_BOT_TOKEN'] = 
+# user = 
+# token_pano = 
+# client = WebClient(token=os.environ.get('SLACK_BOT_TOKEN'))
+channel_id = 'C02FRTUQFV3' #канал panoramik-support
+
+def send_message():
+    try:
+        # Пробуем отправить сообщение в слак
+        client.chat_postMessage(
+            channel=channel_id,
+            text=send_tournament_report() #уточнить, как получить сообщения из этой функции
+        )
+    except SlackApiError as e:
+        print(f'Error: {e}')
 
 
 def get_from_ch(host, query):
