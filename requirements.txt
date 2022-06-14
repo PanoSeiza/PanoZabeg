@@ -1,3 +1,4 @@
 slack_sdk==3.13.0
 clickhouse-driver==0.2.3
 pandas==1.4.2
+clickhouse-connect==0.1.0
