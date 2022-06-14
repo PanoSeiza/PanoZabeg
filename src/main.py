@@ -9,7 +9,7 @@ import os
 
 # CLICKHOUSE_HOST = 'ch0.prod.anal.panoramik.internal'
 CLICKHOUSE_HOST = 'ch.prod.playful-fairies.com'
-os.environ['SLACK_BOT_TOKEN'] = 'xoxb-495075105047-3664659326113-BZpMqiXPbpWzMiEex5zuVtqq'
+# os.environ['SLACK_BOT_TOKEN'] = 'xoxb-495075105047-3664659326113-BZpMqiXPbpWzMiEex5zuVtqq'
 client = WebClient(token=os.environ.get('SLACK_BOT_TOKEN'))
 
 channel_id = 'C03K08F2SCA'  # test channel
