@@ -152,6 +152,7 @@ def send_tournament_report():
                     uniqExactIf(
                         created_on,
                         day = yesterday()
+                        AND toDayOfWeek(toDateTime(created_on)) IN (1, 2, 3, 4, 5)
                         AND (
                             toTime(toDateTime(created_on)) 
                             BETWEEN toTime(toDateTime(JSONExtractString('{work_time_str}', attacker_id, 'from'))) 
